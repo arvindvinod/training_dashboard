@@ -140,7 +140,7 @@ st.markdown("<p class='header-subtext'>Monitoring Swim, Bike, Run, Strength, and
 # --- CREDENTIALS & SUPABASE INIT ---
 intervals_id = os.getenv("INTERVALS_ATHLETE_ID", "")
 intervals_key = os.getenv("INTERVALS_API_KEY", "")
-supabase_url = os.getenv("SUPABASE_URL", "")
+supabase_url = os.getenv("SUPABASE_URL", "").rstrip('/')
 supabase_key = os.getenv("SUPABASE_KEY", "")
 
 supabase: Client | None = None
